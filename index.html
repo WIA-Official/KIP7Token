@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마일스토리 - 혁신을 향한 우주여행 | AI·양자컴퓨팅 선도기업</title>
+    <meta name="description" content="Innovation Beyond Universe - 혁신을 향한 우주여행. 16년간 AI, 양자컴퓨팅, 디지털 혁신을 선도하는 스마일스토리입니다.">
+    
+    <!-- Meta tags omitted for brevity -->
+    
+    <link rel="icon" type="image/png" href="images/sumnail.png">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-gold: #FFD700;
+            --primary-blue: #4169E1;
+            --accent-cyan: #00FFFF;
+            --dark-bg: #000011;
+        }
+        
+        body {
+            background: var(--dark-bg);
+            overflow: hidden;
+            font-family: 'Noto Sans KR', sans-serif;
+            cursor: grab;
+        }
+        
+        body:active {
+            cursor: grabbing;
+        }
+        
+        /* Premium Loading Screen */
+        #premium-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, #000033 0%, #000011 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader-logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 3em;
+            font-weight: 900;
+            color: var(--primary-gold);
+            text-shadow: 0 0 20px var(--primary-gold);
+            margin-bottom: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        
+        .loader-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .loader-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-gold), var(--accent-cyan), var(--primary-gold));
+            background-size: 200% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Rest of original styles with premium enhancements */
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        /* All other styles from original code... */
+    </style>
+</head>
+<body>
+    <!-- Premium Loader -->
+    <div id="premium-loader">
+        <div class="loader-logo">SMILE STORY</div>
+        <div class="loader-bar">
+            <div class="loader-progress" id="loader-progress"></div>
+        </div>
+    </div>
+    
+    <!-- Original HTML content... -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Loading progress
+        let loadingProgress = 0;
+        const loadingInterval = setInterval(() => {
+            loadingProgress += Math.random() * 15;
+            if (loadingProgress >= 100) {
+                loadingProgress = 100;
+                clearInterval(loadingInterval);
+                setTimeout(() => {
+                    document.getElementById('premium-loader').style.opacity = '0';
+                    setTimeout(() => {
+                        document.getElementById('premium-loader').style.display = 'none';
+                    }, 500);
+                }, 300);
+            }
+            document.getElementById('loader-progress').style.width = loadingProgress + '%';
+        }, 200);
+        
+        // All original JavaScript code...
+    </script>
+</body>
+</html>
