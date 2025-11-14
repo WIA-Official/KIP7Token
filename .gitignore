@@ -1,0 +1,39 @@
+# EPUB 파일
+*.epub
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# 개발 환경
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 테스트 출력
+output/
+tmp/
+
+# JSON (테스트 데이터 제외)
+*.json
+!test_data.json

@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "title": "테스트 기사 1 - 테이블과 이미지",
+      "content": "<table border='1' align='center'><tr><td>테이블 셀 1</td><td>테이블 셀 2</td></tr><tr><td>데이터 1</td><td>데이터 2</td></tr></table><p>내용입니다. <img src='test.jpg' decoding='async' width='500'></p><p>더 많은 내용...</p>",
+      "author": "테스트 작가",
+      "date": "2024-11-14"
+    },
+    {
+      "title": "테스트 기사 2 - 복잡한 HTML",
+      "content": "<div class='article'><h2>소제목</h2><p style='color: red;'>스타일이 있는 문단</p><ul><li>항목 1</li><li>항목 2</li></ul><a href='https://example.com'>링크</a><img src='image.png' alt='이미지'></div>",
+      "author": "작가 2",
+      "date": "2024-11-13"
+    },
+    {
+      "title": "테스트 기사 3 - 특수문자",
+      "content": "<p>&lt;HTML&gt; &amp; &quot;특수문자&quot; 테스트</p><p>© 2024 저작권 표시 — 대시 사용</p>",
+      "author": "작가 3",
+      "date": "2024-11-12"
+    },
+    {
+      "title": "테스트 기사 4 - 중첩 테이블",
+      "content": "<table border='2' cellpadding='5'><thead><tr><th align='left'>헤더1</th><th align='right'>헤더2</th></tr></thead><tbody><tr><td>셀1</td><td>셀2</td></tr></tbody></table>",
+      "author": "작가 4",
+      "date": "2024-11-11"
+    },
+    {
+      "title": "테스트 기사 5 - 스크립트 태그",
+      "content": "<p>정상 내용</p><script>alert('악성코드');</script><p>더 많은 내용</p><style>.bad { display: none; }</style>",
+      "author": "작가 5",
+      "date": "2024-11-10"
+    }
+  ],
+  "options": {
+    "author_name": "테스트 작가",
+    "title": "EPUB 테스트 북",
+    "publisher": "테스트 출판사"
+  }
+}
